@@ -1,0 +1,10 @@
+{
+    "name": "guilherme/php-docker-compose",
+    "authors": [
+        {
+            "name": "Guilherme Fonseca",
+            "email": "guilherme.atd@hotmail.com"
+        }
+    ],
+    "require": {}
+}
