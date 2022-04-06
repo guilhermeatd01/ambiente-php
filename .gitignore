@@ -1,2 +1,7 @@
+# Folders
 /.docker/dbdata
+/.devcontainer
 /vendor
+
+# Files
+.env

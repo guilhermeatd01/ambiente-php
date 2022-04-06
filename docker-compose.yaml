@@ -8,6 +8,8 @@ services:
         entrypoint: dockerize -wait tcp://db:3306 -timeout 40s ./.docker/entrypoint.sh
         volumes:
             - .:/var/www
+            - ./.docker/php/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+            - ./.docker/php/conf.d/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini
         networks:
             - app-network
         depends_on:
@@ -39,7 +41,8 @@ services:
             - ./.docker/mysql:/docker-entrypoint-initdb.d
         environment:
             - MYSQL_ROOT_PASSWORD=root
-            - MYSQL_USER=root
+            - MYSQL_USER=guilherme
+            - MYSQL_PASSWORD=admin123
         networks:
             - app-network
 
