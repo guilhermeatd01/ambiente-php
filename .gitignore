@@ -1,6 +1,7 @@
 # Folders
 /.docker/dbdata
 /.devcontainer
+/.phpunit.cache
 /vendor
 
 # Files
